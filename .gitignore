@@ -1,0 +1,6 @@
+.idea
+.terraform
+
+
+environment.sh
+.terraform.lock.hcl
