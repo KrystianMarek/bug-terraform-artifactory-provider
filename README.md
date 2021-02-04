@@ -3,15 +3,15 @@
 ## Test environment
 The following was tested on macOS 10.15.7, with terraform v0.14.5 installed via brew. It was also tested with the docker version
 of terraform via the terraform.sh script.
-Terraform is configured with ENV variables, stored in environment.sh - ignored in this repo.
-File content:  
+Terraform is configured with ENV variables, stored in `environment.sh` - ignored in this repo.
+File content example:  
 ```bash
 export ARTIFACTORY_URL="https://SOME_SAAS_ARTIFACTORY.jfrog.io/artifactory"
 export ARTIFACTORY_API_KEY="secret_key"
 ```
 
 ## terraform init fails
-`terraform init` fails when module is called from within the main.tf. Consider branch master and terraform_init of this repo.  
+`terraform init` fails when module is called from within the main.tf. Consider branch `main` and `terraform_init` of this repo.  
 The error message is:  
 ```bash
 ❯ terraform init
@@ -42,7 +42,7 @@ that release, which might help you address this problem.
 ```
 
 ## terraform plan fails
-If the issue described above is worked around with all resources placed in the `main.tf` (branch terraform_plan)
+If the issue described above is worked around with all resources placed in the `main.tf` (branch `terraform_plan`)
 `terraform plan` fails with
 ```bash
 ❯ terraform plan
