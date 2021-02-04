@@ -1,0 +1,402 @@
+2021/02/04 10:23:44 [INFO] Terraform version: 0.14.5  
+2021/02/04 10:23:44 [INFO] Go runtime version: go1.15.6
+2021/02/04 10:23:44 [INFO] CLI args: []string{"/bin/terraform", "plan"}
+2021/02/04 10:23:44 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2021/02/04 10:23:44 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/02/04 10:23:44 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/02/04 10:23:44 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2021/02/04 10:23:44 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2021/02/04 10:23:44 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2021/02/04 10:23:44 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2021/02/04 10:23:44 [INFO] CLI command args: []string{"plan"}
+2021/02/04 10:23:44 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021/02/04 10:23:44 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021/02/04 10:23:44 [DEBUG] New state was assigned lineage "2b92c2f9-6ef3-2d07-9c40-e187a7080328"
+2021/02/04 10:23:44 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021/02/04 10:23:44 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021/02/04 10:23:44 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021/02/04 10:23:44 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2021/02/04 10:23:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/jfrog/artifactory v2.2.5 for darwin_amd64 at .terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/darwin_amd64
+2021/02/04 10:23:44 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/jfrog/artifactory v2.2.5 for linux_amd64 at .terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64
+2021/02/04 10:23:44 [TRACE] providercache.fillMetaCache: ignoring .terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/darwin_amd64 because it is for darwin_amd64, not linux_amd64
+2021/02/04 10:23:44 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64 as a candidate package for registry.terraform.io/jfrog/artifactory 2.2.5
+2021/02/04 10:23:45 [DEBUG] checking for provisioner in "."
+2021/02/04 10:23:45 [DEBUG] checking for provisioner in "/bin"
+2021/02/04 10:23:45 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021/02/04 10:23:45 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021/02/04 10:23:45 [INFO] backend/local: starting Plan operation
+2021/02/04 10:23:45 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/02/04 10:23:45 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021/02/04 10:23:45 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021/02/04 10:23:45 [TRACE] backend/local: reading remote state for workspace "default"
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: read nil snapshot
+2021/02/04 10:23:45 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/02/04 10:23:45 [TRACE] backend/local: building context for current working directory
+2021/02/04 10:23:45 [TRACE] terraform.NewContext: starting
+2021/02/04 10:23:45 [TRACE] terraform.NewContext: loading provider schemas
+2021/02/04 10:23:45 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/jfrog/artifactory"
+2021-02-04T10:23:45.037Z [INFO]  plugin: configuring client automatic mTLS
+2021-02-04T10:23:45.065Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 args=[.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5]
+2021-02-04T10:23:45.067Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=29
+2021-02-04T10:23:45.067Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5
+2021-02-04T10:23:45.079Z [INFO]  plugin.terraform-provider-artifactory_v2.2.5: configuring server automatic mTLS: timestamp=2021-02-04T10:23:45.079Z
+2021-02-04T10:23:45.109Z [DEBUG] plugin: using plugin: version=5
+2021-02-04T10:23:45.109Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: plugin address: network=unix address=/tmp/plugin218555442 timestamp=2021-02-04T10:23:45.109Z
+2021/02/04 10:23:45 [TRACE] GRPCProvider: GetSchema
+2021-02-04T10:23:45.166Z [TRACE] plugin.stdio: waiting for stdio data
+2021/02/04 10:23:45 [TRACE] No provider meta schema returned
+2021/02/04 10:23:45 [TRACE] GRPCProvider: Close
+2021-02-04T10:23:45.171Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-02-04T10:23:45.173Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=29
+2021-02-04T10:23:45.173Z [DEBUG] plugin: plugin exited
+2021/02/04 10:23:45 [TRACE] terraform.NewContext: complete
+2021/02/04 10:23:45 [TRACE] backend/local: finished building terraform.Context
+2021/02/04 10:23:45 [TRACE] backend/local: requesting interactive input, if necessary
+2021/02/04 10:23:45 [TRACE] Context.Input: Prompting for provider arguments
+2021/02/04 10:23:45 [TRACE] Context.Input: Provider provider.artifactory declared at main.tf:11,1-23
+2021/02/04 10:23:45 [TRACE] Context.Input: Input for provider.artifactory: map[string]cty.Value{}
+2021/02/04 10:23:45 [TRACE] backend/local: running validation operation
+2021/02/04 10:23:45 [INFO] terraform: building graph: GraphTypeValidate
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/02/04 10:23:45 [TRACE] ConfigTransformer: Starting for path: 
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/02/04 10:23:45 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/04 10:23:45 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_local_repository.bug-npm-local" (*terraform.NodeValidatableResource) config from main.tf:17,1-56
+2021/02/04 10:23:45 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to artifactory_local_repository.bug-npm-local
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/04 10:23:45 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/jfrog/artifactory\"]" provider configuration from main.tf:11,1-23
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/04 10:23:45 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/jfrog/artifactory"] serving artifactory_local_repository.bug-npm-local
+2021/02/04 10:23:45 [DEBUG] ProviderTransformer: "artifactory_local_repository.bug-npm-local" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/02/04 10:23:45 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_local_repository.bug-npm-local
+2021/02/04 10:23:45 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/02/04 10:23:45 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/jfrog/artifactory\"]" references: []
+2021/02/04 10:23:45 [DEBUG] ReferenceTransformer: "artifactory_local_repository.bug-npm-local" references: []
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/04 10:23:45 [DEBUG] Starting graph walk: walkValidate
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/jfrog/artifactory\"]"
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-02-04T10:23:45.174Z [INFO]  plugin: configuring client automatic mTLS
+2021-02-04T10:23:45.202Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 args=[.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5]
+2021-02-04T10:23:45.203Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=40
+2021-02-04T10:23:45.203Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5
+2021-02-04T10:23:45.215Z [INFO]  plugin.terraform-provider-artifactory_v2.2.5: configuring server automatic mTLS: timestamp=2021-02-04T10:23:45.215Z
+2021-02-04T10:23:45.241Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: plugin address: address=/tmp/plugin878344347 network=unix timestamp=2021-02-04T10:23:45.241Z
+2021-02-04T10:23:45.241Z [DEBUG] plugin: using plugin: version=5
+2021/02/04 10:23:45 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/jfrog/artifactory\"]" provider for provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] buildProviderConfig for provider["registry.terraform.io/jfrog/artifactory"]: using explicit config only
+2021/02/04 10:23:45 [TRACE] GRPCProvider: GetSchema
+2021-02-04T10:23:45.301Z [TRACE] plugin.stdio: waiting for stdio data
+2021/02/04 10:23:45 [TRACE] No provider meta schema returned
+2021/02/04 10:23:45 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"]": visit complete
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "artifactory_local_repository.bug-npm-local"
+2021/02/04 10:23:45 [TRACE] vertex "artifactory_local_repository.bug-npm-local": starting visit (*terraform.NodeValidatableResource)
+2021/02/04 10:23:45 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/02/04 10:23:45 [TRACE] vertex "artifactory_local_repository.bug-npm-local": visit complete
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/02/04 10:23:45 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/02/04 10:23:45 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/jfrog/artifactory\"] (close)"
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/02/04 10:23:45 [TRACE] GRPCProvider: Close
+2021-02-04T10:23:45.308Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-02-04T10:23:45.309Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=40
+2021-02-04T10:23:45.309Z [DEBUG] plugin: plugin exited
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"] (close)": visit complete
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "root"
+2021/02/04 10:23:45 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/02/04 10:23:45 [TRACE] vertex "root": visit complete
+2021/02/04 10:23:45 [INFO] backend/local: plan calling Plan
+2021/02/04 10:23:45 [INFO] terraform: building graph: GraphTypePlan
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/02/04 10:23:45 [TRACE] ConfigTransformer: Starting for path: 
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/02/04 10:23:45 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/04 10:23:45 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_local_repository.bug-npm-local (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:17,1-56
+2021/02/04 10:23:45 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to artifactory_local_repository.bug-npm-local (expand)
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/04 10:23:45 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/jfrog/artifactory\"]" provider configuration from main.tf:11,1-23
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/04 10:23:45 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/jfrog/artifactory"] serving artifactory_local_repository.bug-npm-local (expand)
+2021/02/04 10:23:45 [DEBUG] ProviderTransformer: "artifactory_local_repository.bug-npm-local (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/04 10:23:45 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/02/04 10:23:45 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_local_repository.bug-npm-local (expand)
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/02/04 10:23:45 [DEBUG] ReferenceTransformer: "artifactory_local_repository.bug-npm-local (expand)" references: []
+2021/02/04 10:23:45 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/jfrog/artifactory\"]" references: []
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/02/04 10:23:45 [TRACE] AttachDependenciesTransformer: artifactory_local_repository.bug-npm-local depends on []
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/02/04 10:23:45 [TRACE] ForcedCBDTransformer: "artifactory_local_repository.bug-npm-local (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/04 10:23:45 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/02/04 10:23:45 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/jfrog/artifactory"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+    artifactory_local_repository.bug-npm-local (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/jfrog/artifactory"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/04 10:23:45 [DEBUG] Starting graph walk: walkPlan
+2021/02/04 10:23:45 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/jfrog/artifactory\"]"
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-02-04T10:23:45.311Z [INFO]  plugin: configuring client automatic mTLS
+2021-02-04T10:23:45.346Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 args=[.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5]
+2021-02-04T10:23:45.348Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=51
+2021-02-04T10:23:45.348Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5
+2021-02-04T10:23:45.365Z [INFO]  plugin.terraform-provider-artifactory_v2.2.5: configuring server automatic mTLS: timestamp=2021-02-04T10:23:45.365Z
+2021-02-04T10:23:45.402Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: plugin address: address=/tmp/plugin499803006 network=unix timestamp=2021-02-04T10:23:45.402Z
+2021-02-04T10:23:45.403Z [DEBUG] plugin: using plugin: version=5
+2021-02-04T10:23:45.463Z [TRACE] plugin.stdio: waiting for stdio data
+2021/02/04 10:23:45 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/jfrog/artifactory\"]" provider for provider["registry.terraform.io/jfrog/artifactory"]
+2021/02/04 10:23:45 [TRACE] buildProviderConfig for provider["registry.terraform.io/jfrog/artifactory"]: using explicit config only
+2021/02/04 10:23:45 [TRACE] GRPCProvider: GetSchema
+2021/02/04 10:23:45 [TRACE] No provider meta schema returned
+2021/02/04 10:23:45 [TRACE] GRPCProvider: Configure
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: panic: runtime error: index out of range [-1]
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: goroutine 15 [running]:
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: github.com/atlassian/terraform-provider-artifactory/pkg/artifactory.providerConfigure(0xc0000c40e0, 0x0, 0x0, 0xc0000c40e0, 0x0)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	github.com/atlassian/terraform-provider-artifactory/pkg/artifactory/provider.go:108 +0xc3e
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: github.com/hashicorp/terraform/helper/schema.(*Provider).Configure(0xc0000af080, 0xc0006b0540, 0x1190940, 0xc0006b04b0)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	github.com/hashicorp/terraform@v0.12.29/helper/schema/provider.go:270 +0xd2
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).Configure(0xc00000e1b0, 0x167db80, 0xc0006b0120, 0xc00063a180, 0xc00000e1b0, 0xc0006b0120, 0xc000697b78)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	github.com/hashicorp/terraform@v0.12.29/helper/plugin/grpc_provider.go:487 +0x2e6
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: github.com/hashicorp/terraform/internal/tfplugin5._Provider_Configure_Handler(0x12f08e0, 0xc00000e1b0, 0x167db80, 0xc0006b0120, 0xc0000789c0, 0x0, 0x167db80, 0xc0006b0120, 0xc00063e040, 0x3d)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	github.com/hashicorp/terraform@v0.12.29/internal/tfplugin5/tfplugin5.pb.go:3135 +0x217
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000001b00, 0x168b120, 0xc000642a80, 0xc0001a0a00, 0xc0005a1500, 0x1f6ca98, 0x0, 0x0, 0x0)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	google.golang.org/grpc@v1.27.1/server.go:1024 +0x501
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: google.golang.org/grpc.(*Server).handleStream(0xc000001b00, 0x168b120, 0xc000642a80, 0xc0001a0a00, 0x0)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	google.golang.org/grpc@v1.27.1/server.go:1313 +0xd3d
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0000aa1c0, 0xc000001b00, 0x168b120, 0xc000642a80, 0xc0001a0a00)
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	google.golang.org/grpc@v1.27.1/server.go:722 +0xa1
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-02-04T10:23:45.471Z [DEBUG] plugin.terraform-provider-artifactory_v2.2.5: 	google.golang.org/grpc@v1.27.1/server.go:720 +0xa1
+2021-02-04T10:23:45.473Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/jfrog/artifactory/2.2.5/linux_amd64/terraform-provider-artifactory_v2.2.5 pid=51 error="exit status 2"
+2021-02-04T10:23:45.473Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Canceled desc = context canceled"
+2021/02/04 10:23:45 [TRACE] vertex "provider[\"registry.terraform.io/jfrog/artifactory\"]": visit complete
+2021/02/04 10:23:45 [TRACE] dag/walk: upstream of "artifactory_local_repository.bug-npm-local (expand)" errored, so skipping
+2021/02/04 10:23:45 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021/02/04 10:23:45 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/jfrog/artifactory\"] (close)" errored, so skipping
+2021/02/04 10:23:45 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021/02/04 10:23:45 [INFO] backend/local: plan operation completed
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2021/02/04 10:23:45 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2021-02-04T10:23:45.477Z [DEBUG] plugin: plugin exited
